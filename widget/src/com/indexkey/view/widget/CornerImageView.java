@@ -1,6 +1,7 @@
 package com.indexkey.view.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -18,22 +19,40 @@ import android.widget.ImageView;
 
 public class CornerImageView extends ImageView {
 
+	private float topLeftRadius = 0f;
+	private float topRightRadius = 0f;
+	private float bottomLeftRadius = 0f;
+	private float bottomRightRadius = 0f;
+
 	public CornerImageView(Context context) {
 		super(context);
 	}
 
 	public CornerImageView(Context context, AttributeSet attrs) {
-		super(context, attrs, 0);
+		this(context, attrs, 0);
 	}
 
 	public CornerImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
+		TypedArray typeArray = context.obtainStyledAttributes(attrs,
+				R.styleable.corners);
+
+		topLeftRadius = typeArray.getDimension(
+				R.styleable.corners_topLeftRadius, 0f);
+		topRightRadius = typeArray.getDimension(
+				R.styleable.corners_topRightRadius, 0f);
+		bottomLeftRadius = typeArray.getDimension(
+				R.styleable.corners_bottomLeftRadius, 0f);
+		bottomRightRadius = typeArray.getDimension(
+				R.styleable.corners_bottomRightRadius, 0f);
+
+		setImageDrawable(getDrawable());
+		typeArray.recycle();
 
 	}
 
 	@Override
 	public void setImageDrawable(Drawable drawable) {
-
 		Drawable rounderDrawable = changeRounder(drawable);
 		super.setImageDrawable(rounderDrawable);
 	}
@@ -55,15 +74,14 @@ public class CornerImageView extends ImageView {
 			Paint paint = new Paint();
 			Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
 			RectF rectF = new RectF(rect);
-			// 圆角弧度
-			float roundPx = 20;
-
 			paint.setAntiAlias(true);
 			// 清除画布 （因为其由output副本创建） 使其圆角为空
 			canvas.drawARGB(0, 0, 0, 0);
 			paint.setColor(color);
-			// 绘制遮罩层
-			canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+			// 绘制遮罩层 TODO need to review
+			// canvas.drawArc(oval, startAngle, sweepAngle, useCenter, paint)
+			// canvas.drawPath(path, paint)
+			canvas.drawRoundRect(rectF, topLeftRadius, topLeftRadius, paint);
 
 			paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
 			// 以 SRC_IN 模式在 output 形成的画布上绘制 Bitmap对象
