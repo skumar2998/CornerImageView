@@ -2,10 +2,8 @@
 <resources>
 
     <declare-styleable name="corners">
-        <attr name="topLeftRadius" format="dimension"></attr>
-        <attr name="topRightRadius" format="dimension"></attr>
-        <attr name="bottomLeftRadius" format="dimension"></attr>
-        <attr name="bottomRightRadius" format="dimension"></attr>
+        <attr name="CornerRadius" format="dimension"></attr>
+      
     </declare-styleable>
 
 </resources>

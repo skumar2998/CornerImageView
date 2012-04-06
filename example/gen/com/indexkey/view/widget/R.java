@@ -18,37 +18,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int bottomLeftRadius=0x7f010002;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bottomRightRadius=0x7f010003;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int topLeftRadius=0x7f010000;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int topRightRadius=0x7f010001;
+        public static final int CornerRadius=0x7f010000;
     }
     public static final class drawable {
         public static final int i304=0x7f020000;
@@ -73,21 +43,15 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #corners_bottomLeftRadius com.indexkey.cornerImageView.example:bottomLeftRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #corners_bottomRightRadius com.indexkey.cornerImageView.example:bottomRightRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #corners_topLeftRadius com.indexkey.cornerImageView.example:topLeftRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #corners_topRightRadius com.indexkey.cornerImageView.example:topRightRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #corners_CornerRadius com.indexkey.cornerImageView.example:CornerRadius}</code></td><td></td></tr>
            </table>
-           @see #corners_bottomLeftRadius
-           @see #corners_bottomRightRadius
-           @see #corners_topLeftRadius
-           @see #corners_topRightRadius
+           @see #corners_CornerRadius
          */
         public static final int[] corners = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
+            0x7f010000
         };
         /**
-          <p>This symbol is the offset where the {@link com.indexkey.cornerImageView.example.R.attr#bottomLeftRadius}
+          <p>This symbol is the offset where the {@link com.indexkey.cornerImageView.example.R.attr#CornerRadius}
           attribute's value can be found in the {@link #corners} array.
 
 
@@ -99,56 +63,8 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bottomLeftRadius
+          @attr name android:CornerRadius
         */
-        public static final int corners_bottomLeftRadius = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.indexkey.cornerImageView.example.R.attr#bottomRightRadius}
-          attribute's value can be found in the {@link #corners} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:bottomRightRadius
-        */
-        public static final int corners_bottomRightRadius = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.indexkey.cornerImageView.example.R.attr#topLeftRadius}
-          attribute's value can be found in the {@link #corners} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:topLeftRadius
-        */
-        public static final int corners_topLeftRadius = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.indexkey.cornerImageView.example.R.attr#topRightRadius}
-          attribute's value can be found in the {@link #corners} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:topRightRadius
-        */
-        public static final int corners_topRightRadius = 1;
+        public static final int corners_CornerRadius = 0;
     };
 }

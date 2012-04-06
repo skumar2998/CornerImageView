@@ -14,11 +14,8 @@
         android:id="@+id/imageView1"
         android:layout_width="240dp"
         android:layout_height="240dp"
-        CornerImage:bottomLeftRadius="60dp"
-        CornerImage:bottomRightRadius="60dp"
-        android:src="@drawable/i304"
-        CornerImage:topLeftRadius="60dp"
-        CornerImage:topRightRadius="60dp" />
+        CornerImage:CornerRadius="160dp"
+        android:src="@drawable/i304" />
 
     <ImageView
         android:id="@+id/imageView2"
