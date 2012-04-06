@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CornerImage="http://schemas.android.com/apk/res/com.indexkey.cornerImageView.example"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -13,7 +14,11 @@
         android:id="@+id/imageView1"
         android:layout_width="240dp"
         android:layout_height="240dp"
-        android:src="@drawable/i304" />
+        CornerImage:bottomLeftRadius="60dp"
+        CornerImage:bottomRightRadius="60dp"
+        android:src="@drawable/i304"
+        CornerImage:topLeftRadius="60dp"
+        CornerImage:topRightRadius="60dp" />
 
     <ImageView
         android:id="@+id/imageView2"
